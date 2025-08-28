@@ -39,6 +39,16 @@ for(i = 0; i < callButtons.length; i++){
 
         //---------call history--------
       const callHistory = getElement("call-history");
+      const now = new Date(); 
+      let  hours = now.getHours();
+      if(hours === 0) hours = 12;
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+      let ampm ; if(hours >= 12) {
+          ampm = 'PM';
+          } else {
+          ampm = 'AM';
+      }
       const newCart = document.createElement("div");
       newCart.innerHTML = `
       <div class="call-history space-y-2 mt-5">
@@ -48,7 +58,7 @@ for(i = 0; i < callButtons.length; i++){
                 <p class="text-lg  text-[#5C5C5C]">${serviceNumber}</p>
             </div>
             <div>
-                <p class="text-sm ">presentigfgjl</p>
+                <p class="text-sm ">${hours}:${minutes}:${seconds} ${ampm}</p>
             </div>
         </div>
     </div>
