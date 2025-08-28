@@ -18,15 +18,14 @@
   
 
 //-------------Call button
-const coinButton = getElement('coin-count');
-let coin = parseInt(coinButton.innerText);
-console.log(coin);
+    const coinButton = getElement('coin-count');
+    let coin = parseInt(coinButton.innerText);
 
-const callButtons = document.getElementsByClassName('call-button')
+    const callButtons = document.getElementsByClassName('call-button')
 
-for(i = 0; i < callButtons.length; i++){
-  callButtons[i].addEventListener('click', function(e){
-    if (e.target.className.includes("call-button")){
+      for(i = 0; i < callButtons.length; i++){
+      callButtons[i].addEventListener('click', function(e){
+      if (e.target.className.includes("call-button")){
       const callButton = e.target;
       const serviceName = callButton.parentNode.parentNode.children[1].children[1].innerText
       const serviceNumber = callButton.parentNode.parentNode.children[1].children[2].children[0].innerText
@@ -74,7 +73,19 @@ for(i = 0; i < callButtons.length; i++){
         const callClear = getElement('call-history');
         callClear.innerHTML = "";
       })
-
     }
   }
 )}
+
+
+//------copy button----//
+      const copyButton = document.getElementsByClassName('copy-button');
+      const copyCount = getElement('copy-count');
+      let copy = 0;
+      for(let i = 0; i < copyButton.length; i++){
+        copyButton[i].addEventListener('click', function(){
+        alert('Number copied successfully!')
+        copy++;
+        copyCount.innerText = copy;
+      })
+      }
