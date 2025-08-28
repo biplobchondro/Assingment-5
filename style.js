@@ -36,10 +36,35 @@ for(i = 0; i < callButtons.length; i++){
         alert(`Calling ${serviceName} Service : ${serviceNumber}`)
         coin -= 20;
         coinButton.innerText = coin;
+
+        //---------call history--------
+      const callHistory = getElement("call-history");
+      const newCart = document.createElement("div");
+      newCart.innerHTML = `
+      <div class="call-history space-y-2 mt-5">
+        <div class="flex justify-between bg-[#FAFAFA] rounded-lg p-4">
+            <div>
+                <h3 class="font-semibold text-sm text-[#111111]">${serviceName}</h3>
+                <p class="text-lg  text-[#5C5C5C]">${serviceNumber}</p>
+            </div>
+            <div>
+                <p class="text-sm ">presentigfgjl</p>
+            </div>
+        </div>
+    </div>
+    `;
+    callHistory.append(newCart);
       }
       else{
         alert("আপনার পযাপ্ত কয়েন নেই, কল করতে কমপক্ষে ২০ কযেন লাগবে")
       }
+
+      // clear button---
+      document.getElementById('clear-btn').addEventListener('click', function(){
+        const callClear = getElement('call-history');
+        callClear.innerHTML = "";
+      })
+
     }
   }
 )}
