@@ -23,17 +23,17 @@
 
         <div class="flex md:w-[397px] h-[52px] m-10 md:mr-[60px]">
             <div class="flex justify-center items-center w-20 md:w-[123px] md:h-[52px] p-2 gap-2 rounded-full bg-[#41ff411a]">
-                <p class="font-bold md:text-2xl">0</p>
+                <p class="font-bold md:text-2xl"><span id="love-count">0</span></p>
                 <img class="md:w-[30px] w-5" src="./asset/heart.png" alt="">
             </div>
 
             <div class="flex justify-center items-center md:w-[106px] h-[52px] p-2 gap-2 rounded-full bg-[#41ff411a] ml-[20px]">
-                <p class="font-bold md:text-2xl">100</p>
+                <p class="font-bold md:text-2xl"><span>100</span></p>
                 <img class="md:w-[24px] w-4" src="./asset/coin.png" alt="">
             </div>
 
             <div class="flex justify-center items-center text-white  md:w-[127px] h-[52px] bg-[#00a63e] p-2 gap-2 rounded-4xl ml-[20px]">
-                <p class="font-semibold">100</p>
+                <p class="font-semibold md:text-2xl"><span>0</span></p>
                 <p class="font-semibold">Copy</p>
             </div>
         </div>
@@ -65,10 +65,10 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
 
                     <!-- cart-1 -->
-        <div class="shadow-sm h-[360px] p-[32px] bg-white">
+        <div class="shadow-xl h-[360px] p-[32px] bg-white">
         <div class="mb-4 flex justify-between items-center">
             <img src="./asset/emergency.png" alt="" class="w-[60px]">
-            <i class="fa-regular fa-heart text-2xl"></i>
+            <i id="love-btn" class="love-btn fa-regular fa-heart text-2xl"></i>
         </div>
         <div>
             <h2 class="font-bold text-[20px]">জাতীয় জরুরি সেবা</h2>
@@ -80,15 +80,15 @@
         </div>
         <div class="flex gap-2">
             <button class="btn w-[50%] text-[#5c5c5c] shadow-sm rounded-lg"><i class="fa-regular fa-copy"></i>Copy</button>
-            <button class="btn w-[50%] text-white bg-[#00a63e] rounded-lg"><i class="fa-solid fa-phone"></i> Call</button>
+            <button class="call-button btn w-[50%] text-white bg-[#00a63e] rounded-lg"><i class="fa-solid fa-phone"></i> Call</button>
         </div>
     </div>
 
                     <!-- cart-2 -->
-    <div class="shadow-sm h-[360px] p-[32px] bg-white">
+    <div class="shadow-xl h-[360px] p-[32px] bg-white">
         <div class="mb-4 flex justify-between items-center">
             <img src="./asset/police.png" alt="" class="w-[60px]">
-            <i class="fa-regular fa-heart text-2xl"></i>
+            <i class="love-btn fa-regular fa-heart text-2xl"></i>
         </div>
         <div>
             <h2 class="font-bold text-[20px]">পুলিশ</h2>
@@ -105,10 +105,10 @@
     </div>
 
                     <!-- cart-3 -->
-    <div class="shadow-sm h-[360px] p-[32px] bg-white">
+    <div class="shadow-xl h-[360px] p-[32px] bg-white">
         <div class="mb-4 flex justify-between items-center">
             <img src="./asset/fire-service.png" alt="" class="w-[60px]">
-            <i class="fa-regular fa-heart text-2xl"></i>
+            <i class="love-btn fa-regular fa-heart text-2xl"></i>
         </div>
         <div>
             <h2 class="font-bold text-[20px]">ফায়ার সার্ভিস</h2>
@@ -125,10 +125,10 @@
     </div>
 
                     <!-- cart-4 -->
-    <div class="shadow-sm h-[360px] p-[32px] bg-white">
+    <div class="shadow-xl h-[360px] p-[32px] bg-white">
         <div class="mb-4 flex justify-between items-center">
             <img src="./asset/ambulance.png" alt="" class="w-[60px]">
-            <i class="fa-regular fa-heart text-2xl"></i>
+            <i class="love-btn fa-regular fa-heart text-2xl"></i>
         </div>
         <div>
             <h2 class="font-bold text-[20px]">অ্যাম্বুলেন্স</h2>
@@ -145,10 +145,10 @@
     </div>
 
                     <!-- cart-5 -->
-    <div class="shadow-sm h-[360px] p-[32px] bg-white">
+    <div class="shadow-xl h-[360px] p-[32px] bg-white">
         <div class="mb-4 flex justify-between items-center">
             <img src="./asset/emergency.png" alt="" class="w-[60px]">
-            <i class="fa-regular fa-heart text-2xl"></i>
+            <i class="love-btn fa-regular fa-heart text-2xl"></i>
         </div>
         <div>
             <h2 class="font-bold text-[20px]">নারী ও শিশু সহায়তা</h2>
@@ -165,10 +165,10 @@
     </div>
 
                     <!-- cart-6 -->
-    <div class="shadow-sm h-[360px] p-[32px] bg-white">
+    <div class="shadow-xl h-[360px] p-[32px] bg-white">
         <div class="mb-4 flex justify-between items-center">
             <img src="./asset/emergency.png" alt="" class="w-[60px]">
-            <i class="fa-regular fa-heart text-2xl"></i>
+            <i class="love-btn fa-regular fa-heart text-2xl"></i>
         </div>
         <div>
             <h2 class="font-bold text-[20px]">দুদক</h2>
@@ -185,10 +185,10 @@
     </div>
 
                     <!-- cart-7-->
-    <div class="shadow-sm h-[360px] p-[32px] bg-white">
+    <div class="shadow-xl h-[360px] p-[32px] bg-white">
         <div class="mb-4 flex justify-between items-center">
             <img src="./asset/emergency.png" alt="" class="w-[60px]">
-            <i class="fa-regular fa-heart text-2xl"></i>
+            <i class="love-btn fa-regular fa-heart text-2xl"></i>
         </div>
         <div>
             <h2 class="font-bold text-[20px]">বিদ্যুৎ বিভ্রাট</h2>
@@ -205,10 +205,10 @@
     </div>
     
                     <!-- cart-8 -->
-    <div class="shadow-sm h-[360px] p-[32px] bg-white">
+    <div class="shadow-xl h-[360px] p-[32px] bg-white">
         <div class="mb-4 flex justify-between items-center">
             <img src="./asset/emergency.png" alt="" class="w-[60px]">
-            <i class="fa-regular fa-heart text-2xl"></i>
+            <i class="love-btn fa-regular fa-heart text-2xl"></i>
         </div>
         <div>
             <h2 class="font-bold text-[20px]">ব্র্যাক</h2>
@@ -225,10 +225,10 @@
     </div>
 
                     <!-- cart-9 -->
-    <div class="shadow-sm h-[360px] p-[32px] bg-white">
+    <div class="shadow-xl h-[360px] p-[32px] bg-white">
         <div class="mb-4 flex justify-between items-center">
             <img src="./asset/emergency.png" alt="" class="w-[60px]">
-            <i class="fa-regular fa-heart text-2xl"></i>
+            <i class="love-btn fa-regular fa-heart text-2xl"></i>
         </div>
         <div>
             <h2 class="font-bold text-[20px]">বাংলাদেশ রেলওয়ে</h2>
@@ -253,5 +253,6 @@
         </aside>
         </section>
     </main>
+    <script src="style.js"></script>
 </body>
 </html>
