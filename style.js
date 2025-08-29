@@ -21,7 +21,7 @@
     const coinButton = getElement('coin-count');
     let coin = parseInt(coinButton.innerText);
 
-    const callButtons = document.getElementsByClassName('call-button')
+    const callButtons = document.querySelectorAll('.call-button')
 
       for(i = 0; i < callButtons.length; i++){
       callButtons[i].addEventListener('click', function(e){
@@ -81,7 +81,7 @@
 
 
 //------copy button----//
-      const copyButton = document.getElementsByClassName('copy-button');
+      const copyButton = document.querySelectorAll('.copy-button');
       const copyCount = getElement('copy-count');
       let copy = 0;
       for(let i = 0; i < copyButton.length; i++){
