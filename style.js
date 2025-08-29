@@ -27,12 +27,13 @@
       callButtons[i].addEventListener('click', function(e){
       if (e.target.className.includes("call-button")){
       const callButton = e.target;
+      const serviceTitle = callButton.parentNode.parentNode.children[1].children[0].innerText
       const serviceName = callButton.parentNode.parentNode.children[1].children[1].innerText
       const serviceNumber = callButton.parentNode.parentNode.children[1].children[2].children[0].innerText
       console.log(serviceNumber);
 
       if(coin >= 20){
-        alert(`Calling ${serviceName} Service : ${serviceNumber}`)
+        alert(`📞 Calling ${serviceName} Service  ${serviceNumber}....`)
         coin -= 20;
         coinButton.innerText = coin;
 
@@ -53,7 +54,7 @@
       <div class="call-history space-y-2 mt-5">
         <div class="flex justify-between bg-[#FAFAFA] rounded-lg p-4">
             <div>
-                <h3 class="font-semibold text-sm text-[#111111]">${serviceName}</h3>
+                <h3 class="font-semibold text-sm text-[#111111]">${serviceTitle}</h3>
                 <p class="text-lg  text-[#5C5C5C]">${serviceNumber}</p>
             </div>
             <div>
@@ -65,7 +66,7 @@
     callHistory.append(newCart);
       }
       else{
-        alert("আপনার পযাপ্ত কয়েন নেই, কল করতে কমপক্ষে ২০ কযেন লাগবে")
+        alert("❌ আপনার পযাপ্ত কয়েন নেই, কল করতে কমপক্ষে ২০ কযেন লাগবে")
       }
 
       // clear button---
@@ -83,9 +84,22 @@
       const copyCount = getElement('copy-count');
       let copy = 0;
       for(let i = 0; i < copyButton.length; i++){
-        copyButton[i].addEventListener('click', function(){
-        alert('Number copied successfully!')
+        copyButton[i].addEventListener('click', function(e){
+        if (e.target.className.includes("copy-button")){
+      const callButton = e.target;
+      const serviceNumber = callButton.parentNode.parentNode.children[1].children[2].children[0].innerText
+                //--নম্বর কপি হয়েছে--
+        const tempInput = document.createElement('textarea');
+      tempInput.value = serviceNumber;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999); // মোবাইল সাপোর্ট
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+        alert(`© নম্বর কপি হয়েছে : ${serviceNumber}`)
         copy++;
         copyCount.innerText = copy;
+        }
       })
       }
